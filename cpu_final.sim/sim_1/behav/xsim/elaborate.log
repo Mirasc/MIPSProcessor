@@ -1,0 +1,44 @@
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 1b15c23794114ed2b33c7b75585c5ea4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpu_test_behav xil_defaultlib.cpu_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ControlUnit_FSM
+Compiling module xil_defaultlib.decoder_for_alu
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.trigger_D_rst
+Compiling module xil_defaultlib.mux_2
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_gen_0
+Compiling module xil_defaultlib.trigger_D
+Compiling module xil_defaultlib.mux2_5bit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.SignImm
+Compiling module xil_defaultlib.mux_4
+Compiling module xil_defaultlib.noteverybit
+Compiling module xil_defaultlib.andd
+Compiling module xil_defaultlib.orr
+Compiling module xil_defaultlib.fa_prefix
+Compiling module xil_defaultlib.fa_prefix_32bit
+Compiling module xil_defaultlib.mult
+Compiling module xil_defaultlib.aminusb
+Compiling module xil_defaultlib.slt
+Compiling module xil_defaultlib.mux4bit
+Compiling module xil_defaultlib.mux32bit
+Compiling module xil_defaultlib.aleftshift
+Compiling module xil_defaultlib.axorb
+Compiling module xil_defaultlib.aequalb
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.cpu_main
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.load_cpudata
+Compiling module xil_defaultlib.counter_clk
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.cpu_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_test_behav

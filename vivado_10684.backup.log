@@ -1,0 +1,677 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Jun 24 02:45:33 2018
+# Process ID: 10684
+# Current directory: C:/Users/gplovesy/Desktop/cpu/cpu_final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5624 C:\Users\gplovesy\Desktop\cpu\cpu_final\cpu_final.xpr
+# Log file: C:/Users/gplovesy/Desktop/cpu/cpu_final/vivado.log
+# Journal file: C:/Users/gplovesy/Desktop/cpu/cpu_final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/gp1998/Documents/nuts/cpu/cpu_final' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 852.348 ; gain = 155.219
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tcpg236-1
+INFO: [Netlist 29-17] Analyzing 9932 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 7 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'TOP' is not ideal for floorplanning, since the cellview 'spram' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2018.1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'analyser/inst'
+Finished Parsing XDC File [c:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'analyser/inst'
+Parsing XDC File [c:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'analyser/inst'
+Finished Parsing XDC File [c:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'analyser/inst'
+Parsing XDC File [C:/Users/gplovesy/Desktop/cpu/Basys-3-Master.xdc]
+Finished Parsing XDC File [C:/Users/gplovesy/Desktop/cpu/Basys-3-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8253 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 60 instances
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 1 instances
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 8192 instances
+
+open_run: Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1447.738 ; gain = 555.867
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sun Jun 24 02:54:43 2018] Launched synth_1...
+Run output will be captured here: C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.runs/synth_1/runme.log
+[Sun Jun 24 02:54:43 2018] Launched impl_1...
+Run output will be captured here: C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.runs/impl_1/runme.log
+close_design
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+set_property -dict [list CONFIG.depth {4096}] [get_ips dist_mem_gen_0]
+generate_target all [get_files  C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'dist_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'dist_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'dist_mem_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'dist_mem_gen_0'...
+export_ip_user_files -of_objects [get_files C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/dist_mem_gen_0/dist_mem_gen_0.xci] -directory C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.ip_user_files -ipstatic_source_dir C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.cache/compile_simlib/modelsim} {questa=C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.cache/compile_simlib/questa} {riviera=C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.cache/compile_simlib/riviera} {activehdl=C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs synth_1 -jobs 8
+[Sun Jun 24 03:07:47 2018] Launched synth_1...
+Run output will be captured here: C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.runs/synth_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/ins.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dist_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/ControlUnit_FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit_FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/SignImm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignImm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aequalb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aequalb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aleftshift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aleftshift
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aminusb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aminusb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/andd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andd
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/axorb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axorb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/cpu_main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/decoder_for_alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_for_alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/fa_prefix.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fa_prefix
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/fa_prefix_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fa_prefix_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/load_cpudata.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module load_cpudata
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux2_5bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2_5bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux4bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/noteverybit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noteverybit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/orr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module orr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/slt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slt
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/trigger_D.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trigger_D
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/trigger_D_rst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trigger_D_rst
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sim_1/new/cpu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 1b15c23794114ed2b33c7b75585c5ea4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpu_test_behav xil_defaultlib.cpu_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port add on this module [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sim_1/new/cpu_test.v:35]
+ERROR: [VRFC 10-426] cannot find port RD on this module [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sim_1/new/cpu_test.v:34]
+ERROR: [VRFC 10-426] cannot find port control on this module [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sim_1/new/cpu_test.v:33]
+ERROR: [VRFC 10-426] cannot find port rst on this module [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sim_1/new/cpu_test.v:32]
+ERROR: [VRFC 10-2063] Module <CPU> not found while processing module instance <my_cpuok> [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v:33]
+ERROR: [VRFC 10-2063] Module <load_cpudata> not found while processing module instance <loadok> [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v:34]
+ERROR: [VRFC 10-2063] Module <ila_0> not found while processing module instance <analyser> [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v:35]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1453.305 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/ins.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dist_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/ControlUnit_FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit_FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/SignImm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignImm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+WARNING: [VRFC 10-1315] redeclaration of ansi port add is not allowed [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v:30]
+WARNING: [VRFC 10-1315] redeclaration of ansi port RD is not allowed [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v:31]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aequalb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aequalb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aleftshift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aleftshift
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aminusb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aminusb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/andd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andd
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/axorb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axorb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/cpu_main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/decoder_for_alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_for_alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/fa_prefix.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fa_prefix
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/fa_prefix_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fa_prefix_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/load_cpudata.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module load_cpudata
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux2_5bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2_5bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux4bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/noteverybit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noteverybit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/orr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module orr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/slt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slt
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/trigger_D.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trigger_D
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/trigger_D_rst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trigger_D_rst
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sim_1/new/cpu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_test
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 1b15c23794114ed2b33c7b75585c5ea4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpu_test_behav xil_defaultlib.cpu_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ControlUnit_FSM
+Compiling module xil_defaultlib.decoder_for_alu
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.trigger_D_rst
+Compiling module xil_defaultlib.mux_2
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_gen_0
+Compiling module xil_defaultlib.trigger_D
+Compiling module xil_defaultlib.mux2_5bit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.SignImm
+Compiling module xil_defaultlib.mux_4
+Compiling module xil_defaultlib.noteverybit
+Compiling module xil_defaultlib.andd
+Compiling module xil_defaultlib.orr
+Compiling module xil_defaultlib.fa_prefix
+Compiling module xil_defaultlib.fa_prefix_32bit
+Compiling module xil_defaultlib.mult
+Compiling module xil_defaultlib.aminusb
+Compiling module xil_defaultlib.slt
+Compiling module xil_defaultlib.mux4bit
+Compiling module xil_defaultlib.mux32bit
+Compiling module xil_defaultlib.aleftshift
+Compiling module xil_defaultlib.axorb
+Compiling module xil_defaultlib.aequalb
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.cpu_main
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.load_cpudata
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.cpu_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_test_behav
+
+****** Webtalk v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/xsim.dir/cpu_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Jun 24 03:15:31 2018...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1453.305 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_test_behav -key {Behavioral:sim_1:Functional:cpu_test} -tclbatch {cpu_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source cpu_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 1453.305 ; gain = 0.000
+run all
+$finish called at time : 40053040 ns : File "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sim_1/new/cpu_test.v" Line 56
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1453.305 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/ins.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dist_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/ControlUnit_FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit_FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/SignImm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignImm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+WARNING: [VRFC 10-1315] redeclaration of ansi port add is not allowed [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v:30]
+WARNING: [VRFC 10-1315] redeclaration of ansi port RD is not allowed [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v:31]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aequalb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aequalb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aleftshift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aleftshift
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aminusb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aminusb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/andd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andd
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/axorb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axorb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/cpu_main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/decoder_for_alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_for_alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/fa_prefix.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fa_prefix
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/fa_prefix_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fa_prefix_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/load_cpudata.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module load_cpudata
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux2_5bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2_5bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux4bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/noteverybit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noteverybit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/orr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module orr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/slt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slt
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/trigger_D.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trigger_D
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/trigger_D_rst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trigger_D_rst
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sim_1/new/cpu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_test
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 1b15c23794114ed2b33c7b75585c5ea4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpu_test_behav xil_defaultlib.cpu_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ControlUnit_FSM
+Compiling module xil_defaultlib.decoder_for_alu
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.trigger_D_rst
+Compiling module xil_defaultlib.mux_2
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_gen_0
+Compiling module xil_defaultlib.trigger_D
+Compiling module xil_defaultlib.mux2_5bit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.SignImm
+Compiling module xil_defaultlib.mux_4
+Compiling module xil_defaultlib.noteverybit
+Compiling module xil_defaultlib.andd
+Compiling module xil_defaultlib.orr
+Compiling module xil_defaultlib.fa_prefix
+Compiling module xil_defaultlib.fa_prefix_32bit
+Compiling module xil_defaultlib.mult
+Compiling module xil_defaultlib.aminusb
+Compiling module xil_defaultlib.slt
+Compiling module xil_defaultlib.mux4bit
+Compiling module xil_defaultlib.mux32bit
+Compiling module xil_defaultlib.aleftshift
+Compiling module xil_defaultlib.axorb
+Compiling module xil_defaultlib.aequalb
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.cpu_main
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.load_cpudata
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.cpu_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_test_behav -key {Behavioral:sim_1:Functional:cpu_test} -tclbatch {cpu_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source cpu_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1453.305 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Xilinx/Vivado/2018.1/data/xsim/ip/xsim_ip.ini' copied to run dir:'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'cpu_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/dist_mem_gen_0.mif'
+INFO: [SIM-utils-43] Exported 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim/ins.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj cpu_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dist_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/ControlUnit_FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlUnit_FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/Control_Unit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Control_Unit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/Register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/SignImm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SignImm
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
+WARNING: [VRFC 10-1315] redeclaration of ansi port add is not allowed [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v:30]
+WARNING: [VRFC 10-1315] redeclaration of ansi port RD is not allowed [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v:31]
+WARNING: [VRFC 10-1315] redeclaration of ansi port rst is not allowed [C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/TOP.v:32]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aequalb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aequalb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aleftshift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aleftshift
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/aminusb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aminusb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/andd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andd
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/axorb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axorb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/cpu_main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_main
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/decoder_for_alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_for_alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/fa_prefix.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fa_prefix
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/fa_prefix_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fa_prefix_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/load_cpudata.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module load_cpudata
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mult
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux2_5bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2_5bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux4bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/mux_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/noteverybit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noteverybit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/orr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module orr
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/slt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slt
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/trigger_D.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trigger_D
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/new/trigger_D_rst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module trigger_D_rst
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sim_1/new/cpu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpu_test
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.1
+Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 1b15c23794114ed2b33c7b75585c5ea4 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpu_test_behav xil_defaultlib.cpu_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ControlUnit_FSM
+Compiling module xil_defaultlib.decoder_for_alu
+Compiling module xil_defaultlib.Control_Unit
+Compiling module xil_defaultlib.trigger_D_rst
+Compiling module xil_defaultlib.mux_2
+Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
+Compiling module xil_defaultlib.dist_mem_gen_0
+Compiling module xil_defaultlib.trigger_D
+Compiling module xil_defaultlib.mux2_5bit
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.SignImm
+Compiling module xil_defaultlib.mux_4
+Compiling module xil_defaultlib.noteverybit
+Compiling module xil_defaultlib.andd
+Compiling module xil_defaultlib.orr
+Compiling module xil_defaultlib.fa_prefix
+Compiling module xil_defaultlib.fa_prefix_32bit
+Compiling module xil_defaultlib.mult
+Compiling module xil_defaultlib.aminusb
+Compiling module xil_defaultlib.slt
+Compiling module xil_defaultlib.mux4bit
+Compiling module xil_defaultlib.mux32bit
+Compiling module xil_defaultlib.aleftshift
+Compiling module xil_defaultlib.axorb
+Compiling module xil_defaultlib.aequalb
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.cpu_main
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.load_cpudata
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.TOP
+Compiling module xil_defaultlib.cpu_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "cpu_test_behav -key {Behavioral:sim_1:Functional:cpu_test} -tclbatch {cpu_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+source cpu_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'cpu_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1453.305 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1453.305 ; gain = 0.000
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4331] Invalid usage of property - Setting value property on PARAM_VALUE.ALL_PROBE_SAME_MU is not allowed in procedure update_gui_for_PARAM_VALUE.C_ADV_TRIGGER
+set_property -dict [list CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_ADV_TRIGGER {true} CONFIG.C_PROBE3_MU_CNT {2} CONFIG.C_PROBE2_MU_CNT {2} CONFIG.C_PROBE1_MU_CNT {2} CONFIG.C_PROBE0_MU_CNT {2} CONFIG.ALL_PROBE_SAME_MU_CNT {2}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'ila_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ila_0'...
+generate_target: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1453.305 ; gain = 0.000
+export_ip_user_files -of_objects [get_files C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.ip_user_files -ipstatic_source_dir C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.cache/compile_simlib/modelsim} {questa=C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.cache/compile_simlib/questa} {riviera=C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.cache/compile_simlib/riviera} {activehdl=C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: TOP
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1509.969 ; gain = 56.664
+---------------------------------------------------------------------------------
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'source' was cancelled
+2 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1634.488 ; gain = 181.184
+INFO: [Common 17-344] 'synth_design' was cancelled
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.runs/synth_1
+
+launch_runs synth_1 -jobs 8
+[Sun Jun 24 03:25:43 2018] Launched synth_1...
+Run output will be captured here: C:/Users/gplovesy/Desktop/cpu/cpu_final/cpu_final.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 24 03:32:00 2018...

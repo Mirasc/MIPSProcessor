@@ -1,0 +1,40 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../cpu_final.srcs/sources_1/ip/ila_0/sim/ila_0.v" \
+"../../../../cpu_final.srcs/sources_1/ip/dist_mem_gen_0/sim/dist_mem_gen_0.v" \
+"../../../../cpu_final.srcs/sources_1/new/CPU.v" \
+"../../../../cpu_final.srcs/sources_1/new/ControlUnit_FSM.v" \
+"../../../../cpu_final.srcs/sources_1/new/Control_Unit.v" \
+"../../../../cpu_final.srcs/sources_1/new/Register.v" \
+"../../../../cpu_final.srcs/sources_1/new/SignImm.v" \
+"../../../../cpu_final.srcs/sources_1/new/TOP.v" \
+"../../../../cpu_final.srcs/sources_1/new/aequalb.v" \
+"../../../../cpu_final.srcs/sources_1/new/aleftshift.v" \
+"../../../../cpu_final.srcs/sources_1/new/alu.v" \
+"../../../../cpu_final.srcs/sources_1/new/aminusb.v" \
+"../../../../cpu_final.srcs/sources_1/new/andd.v" \
+"../../../../cpu_final.srcs/sources_1/new/axorb.v" \
+"../../../../cpu_final.srcs/sources_1/new/counter_clk.v" \
+"../../../../cpu_final.srcs/sources_1/new/cpu_main.v" \
+"../../../../cpu_final.srcs/sources_1/new/decoder_for_alu.v" \
+"../../../../cpu_final.srcs/sources_1/new/fa_prefix.v" \
+"../../../../cpu_final.srcs/sources_1/new/fa_prefix_32bit.v" \
+"../../../../cpu_final.srcs/sources_1/new/load_cpudata.v" \
+"../../../../cpu_final.srcs/sources_1/new/mult.v" \
+"../../../../cpu_final.srcs/sources_1/new/mux2_5bit.v" \
+"../../../../cpu_final.srcs/sources_1/new/mux32bit.v" \
+"../../../../cpu_final.srcs/sources_1/new/mux4bit.v" \
+"../../../../cpu_final.srcs/sources_1/new/mux_2.v" \
+"../../../../cpu_final.srcs/sources_1/new/mux_4.v" \
+"../../../../cpu_final.srcs/sources_1/new/noteverybit.v" \
+"../../../../cpu_final.srcs/sources_1/new/orr.v" \
+"../../../../cpu_final.srcs/sources_1/new/slt.v" \
+"../../../../cpu_final.srcs/sources_1/new/trigger_D.v" \
+"../../../../cpu_final.srcs/sources_1/new/trigger_D_rst.v" \
+"../../../../cpu_final.srcs/sim_1/new/cpu_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,4 @@
+Vivado Simulator 2018.1
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+$finish called at time : 40023040 ns : File "C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.srcs/sim_1/new/cpu_test.v" Line 55

@@ -1,0 +1,158 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Jun 24 20:55:57 2018
+# Process ID: 12688
+# Current directory: C:/Users/gp1998/Documents/nuts/cpu/cpu_final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12900 C:\Users\gp1998\Documents\nuts\cpu\cpu_final\cpu_final.xpr
+# Log file: C:/Users/gp1998/Documents/nuts/cpu/cpu_final/vivado.log
+# Journal file: C:/Users/gp1998/Documents/nuts/cpu/cpu_final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.xpr
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top alu_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source alu_tb.tcl
+update_compile_order -fileset sim_1
+run 10 us
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Control_Unit_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source Control_Unit_tb.tcl
+update_compile_order -fileset sim_1
+run 10 us
+restart
+run 10 us
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top cpu_test [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+set_property -dict [list CONFIG.C_DATA_DEPTH {2048} CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_ADV_TRIGGER {true}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_0.xci]
+export_ip_user_files -of_objects [get_files C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.ip_user_files -ipstatic_source_dir C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.cache/compile_simlib/modelsim} {questa=C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.cache/compile_simlib/questa} {riviera=C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.cache/compile_simlib/riviera} {activehdl=C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close [ open C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.srcs/sources_1/new/counter_clk.v w ]
+add_files C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.srcs/sources_1/new/counter_clk.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.C_PROBE5_WIDTH {32} CONFIG.C_NUM_OF_PROBES {6} CONFIG.C_PROBE5_MU_CNT {2}] [get_ips ila_0]
+generate_target all [get_files  C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_0.xci]
+export_ip_user_files -of_objects [get_files C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.srcs/sources_1/ip/ila_0/ila_0.xci] -directory C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.ip_user_files -ipstatic_source_dir C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.cache/compile_simlib/modelsim} {questa=C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.cache/compile_simlib/questa} {riviera=C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.cache/compile_simlib/riviera} {activehdl=C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source cpu_test.tcl
+restart
+run 10 us
+current_sim simulation_2
+close_sim
+current_sim simulation_3
+close_sim
+close_sim
+launch_simulation
+source cpu_test.tcl
+run all
+close_sim
+launch_simulation
+source cpu_test.tcl
+run 10 us
+close_sim
+launch_simulation
+source cpu_test.tcl
+restart
+run 10 us
+run all
+close_sim
+launch_simulation
+source cpu_test.tcl
+run all
+close_sim
+launch_simulation
+source cpu_test.tcl
+run all
+close_sim
+launch_simulation
+source cpu_test.tcl
+run all
+clear
+clear al
+clear all
+clc
+close_sim
+launch_simulation
+source cpu_test.tcl
+close_sim
+launch_simulation
+source cpu_test.tcl
+run all
+close_sim
+launch_simulation
+source cpu_test.tcl
+run all
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+save_wave_config {C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.sim/sim_1/behav/cpu_test_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.sim/sim_1/behav/cpu_test_behav.wcfg
+set_property xsim.view C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.sim/sim_1/behav/cpu_test_behav.wcfg [get_filesets sim_1]
+create_wave_config; add_wave /; set_property needs_save false [current_wave_config]
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.runs/impl_1/TOP.bit} [get_hw_devices xc7a35t_0]
+set_property PROBES.FILE {C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.runs/impl_1/TOP.ltx} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.runs/impl_1/TOP.ltx} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {s25fl032p-spi-x1_x2_x4}] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.runs/impl_1/TOP.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+if {![string equal [get_property PROGRAM.HW_CFGMEM_TYPE  [lindex [get_hw_devices xc7a35t_0] 0]] [get_property MEM_TYPE [get_property CFGMEM_PART [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]]]] }  { create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; }; 
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+endgroup
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"analyser"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {num} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"analyser"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"analyser"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a35t_0] -filter {CELL_NAME=~"analyser"}]]
+write_hw_ila_data -csv_file {C:\Users\gp1998\Documents\nuts\cpu\cpu_final\cpu_final.sim\sim_1\behav\iladata.csv} hw_ila_data_1
+write_hw_ila_data -csv_file {C:\Users\gp1998\Documents\nuts\cpu\cpu_final\cpu_final.sim\sim_1\behav\iladata.csv} hw_ila_data_1
+write_hw_ila_data {C:\Users\gp1998\Documents\nuts\cpu\cpu_final\cpu_final.sim\sim_1\behav\iladata.ila} hw_ila_data_1
+write_hw_ila_data -vcd_file {C:\Users\gp1998\Documents\nuts\cpu\cpu_final\cpu_final.sim\sim_1\behav\iladata.vcd} hw_ila_data_1
+write_hw_ila_data -csv_file -force {C:\Users\gp1998\Documents\nuts\cpu\cpu_final\cpu_final.sim\sim_1\behav\iladata.csv} hw_ila_data_1
+write_hw_ila_data -csv_file -force {C:\Users\gp1998\Documents\nuts\cpu\cpu_final\cpu_final.sim\sim_1\behav\iladata.csv} hw_ila_data_1
+write_hw_ila_data -csv_file -force {C:\Users\gp1998\Documents\nuts\cpu\cpu_final\cpu_final.sim\sim_1\behav\iladata.csv} hw_ila_data_1
+open_run impl_1
+report_utilization -name utilization_1
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+current_design impl_1
+close_sim
+save_wave_config {C:/Users/gp1998/Documents/nuts/cpu/cpu_final/cpu_final.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
